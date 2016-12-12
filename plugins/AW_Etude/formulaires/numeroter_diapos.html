@@ -1,0 +1,53 @@
+<form action="#ENV{action}" method="POST" enctype="multipart/form-data">
+	#ACTION_FORMULAIRE{#ENV{action}}
+	<div class="formulaire_spip" style="margin-top : 64px;">
+	
+	<div id="nouvelle_num_input"></div>
+	<h4>Renuméroter</h4>
+	<p class="">Faites glisser les diapos pour en modifier l'ordre et validez.</li>
+	<div class="boutons" >
+		<button  class="btn btn-default" id="valider_numerotation">Valider</button>
+	</div>
+	</div>
+</form>
+
+
+<B_diapos>
+	<ul class="diapos_critere clearfix">
+<BOUCLE_diapos(ARTICLES) {id_rubrique = 1} {pagination 20} {statut IN prop,prepa,publie} {par numero_ordre}>
+	<li id="diapo_#ID_ARTICLE" class="diapo_vignette">
+		<div class="">
+			[(#TITRE|couper{38})]
+		</div>
+		<img class="AW_diapo" src="#CHEMIN{images/diapo.png}" height="109px" width="123px"/>
+		<div class="diapo_vignette_edit">
+			<a class="mediabox" href="[(#URL_PAGE{squelettes/diapo,id_article=#ID_ARTICLE})]" title="<:aw_etude:label_editer_diapo:>">
+				<img src="../plugins/AW_Etude/prive/themes/spip/images/diapo_small.png"/>
+			</a>
+		</div>
+	</li>
+</BOUCLE_diapos>
+	</ul>
+	#ANCRE_PAGINATION
+</B_diapos>
+
+<script type="text/javascript">
+$(document).ready( function(){
+	AW_diapos.initRenumeroter = function() {
+		  var liste=$('.diapos_critere');
+		  liste.sortable({
+				update:function() {
+				  	var nouvelle_num=$(this).sortable('toArray');
+				  	var num=$('');
+					$.each(nouvelle_num, function(key,value) {
+						var ajouter=$('<input/>',{'name':'nouvelle_num\[\]', 'type':'hidden', 'value':value});
+						num=num.add(ajouter);
+						});
+				  	$('#nouvelle_num_input').empty().append(num);
+			  	}
+		  });
+		  liste.disableSelection();
+	}
+	AW_diapos.initRenumeroter()
+});
+</script>
