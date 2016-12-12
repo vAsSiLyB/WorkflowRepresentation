@@ -1,0 +1,113 @@
+#CACHE{0}
+<B_diapos>
+	<div class="diapo_container">
+<BOUCLE_diapos(ARTICLES) {id_article = #ID_ARTICLE} {statut IN prop,prepa,publie}>
+		<div class="diapo_presentation">
+			<div id="diapo_titre" class="#EDIT{titre} titre diapo_field gizmo">
+				<span style="color : #AAA; font-size : 12px">Titre</span>
+			</div>
+			<div id="diapo_sousTitre" class="#EDIT{soustitre} soustitre diapo_field gizmo">
+				<span style="color : #AAA; font-size : 12px">Sous-titre</span>
+			</div>
+			<div id="diapo_chapo" class="#EDIT{chapo} chapo diapo_field gizmo">
+				<span style="color : #AAA; font-size : 12px">Chapeau</span>
+			</div>
+			<div id="diapo_texte" class="#EDIT{texte} texte diapo_field gizmo">
+				<span style="color : #AAA; font-size : 12px">Texte</span>
+			</div>
+			<div id="diapo_wgraph" class="#EDIT{wgraph} diapo_field gizmo">
+				<span style="color : #AAA; font-size : 12px">Workflow Graph</span>
+			</div>
+			<div id="wgraph_container" class="graph_container">
+			</div>
+			<div id="diapo_wchart" class="#EDIT{wchart} diapo_field gizmo">
+				<span style="color : #AAA; font-size : 12px">Workflow Chart</span>
+			</div>
+			<div id="wchart_container" class="graph_container">
+			</div>
+			<div id="diapo_ps" class="#EDIT{ps} ps diapo_field gizmo">
+				<span style="color : #AAA; font-size : 12px">Post-scriptum</span>
+			</div>
+		</div>
+</BOUCLE_diapos>
+	</div>
+</B_diapos>
+
+<script type="text/javascript">
+$(document).ready( function(){
+	
+	// Font Preload (google webfont not working with Open Sans Condensed : https://github.com/google/fonts/issues/134)
+	if ($('.Open_Sans_CB').length === 0)
+		$('<span/>', {'class' : 'font_preloader Open_Sans_CB', style : 'font-family : Open Sans CB;'}).prependTo('body');
+	if ($('.Proxima_Nova').length === 0)
+		$('<span/>', {'class' : 'font_preloader Proxima_Nova', style : 'font-family : Proxima Nova Condensed Thin;'}).prependTo('body');
+	
+	mainInteract = new stageInteractions()
+	preload.afterComplete = AW_diapos.loadContent;
+	
+// 	relative =  AW_diapos.testEspacePrive ? '../' : '';
+	var newRenderer;
+	
+	AW_diapos.loadContent = function() {
+		var self = this, renderers = [];
+		$.ajax({
+			type : 'get',
+			url : relative + 'spip.php?page=squelettes/diapo_JSON&id_article=' + #ID_ARTICLE + '&exec=diapos',
+			success : function(data) {
+
+				$.each(data[0], function(key, value) {
+					if (value.length !== 0) {
+						$('#diapo_' + key).html(he.decode(value));
+						if (key === 'wgraph' || key === 'wchart') {
+							$('#diapo_' + key).css({marginTop : '5px', padding : '5px 21px'});
+							var graphContainer = $('#' + key + '_container');
+							graphContainer.height(600);
+							setTimeout(function() {
+								newRenderer = new PIXI.CanvasRenderer(graphContainer[0].clientWidth, graphContainer.height(), {transparent:true, antialias : false, autoResize : true});
+								graphContainer.append($(newRenderer.view));
+							}, 1024);
+							self.graph2load = value;
+							renderers.push(key);
+						}
+					}
+					else {
+						if ((key === 'wchart' && !renderers['wchart']) || (key === 'wgraph' && !renderers['wgraph']))
+							$('#' + key + '_container').detach();
+						else
+							$('#diapo_' + key).empty();
+					}
+				});
+				if (renderers.length <= 1) {
+					setTimeout(function() {
+						self.prepareUniqueStage();
+					}, 1024);
+				}
+			},
+			error : function(jqXHR, error, errorText) {
+				console.log(jqXHR, error, errorText);
+			}
+		});
+	}
+	
+	AW_diapos.prepareUniqueStage = function() {
+		renderer = newRenderer;
+		renderer.view.id = "main_canvas";
+		stage = new PIXI.Container();
+		TweenMax.ticker.addEventListener("tick", function() {
+			renderer.render(stage);
+		});
+		WG.anyGraphInit(this.graph2load, relative + 'plugins/AW_Etude');
+	}
+	
+	if (preload.completed && !preload.afterCompletefired) {
+		WebFont.load({
+		    google: {
+		      families: ['Fjalla One', 'Roboto Condensed']
+		    },
+		    active: function() {
+		    	AW_diapos.loadContent();
+		    }
+		});
+	}
+});
+</script>

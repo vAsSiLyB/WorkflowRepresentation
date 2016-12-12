@@ -1,0 +1,33 @@
+#HTTP_HEADER{Content-Type: application/json;charset=utf8}#HTTP_HEADER{Vary: Accept-Encoding}<B_unique>[<BOUCLE_unique(ARTICLES) {si #ENV{numero_ordre}|sinon{#ENV{id_article}}} {numero_ordre?} {id_article?} {statut IN prop,prepa,publie}>
+		{
+			"id_article" : #ID_ARTICLE,
+			"titre" : "[(#TITRE|html_entity_decode{7, UTF-8}|htmlspecialchars)]",
+			"sousTitre" : "[(#SOUSTITRE|html_entity_decode{7, UTF-8}|htmlspecialchars)]",
+			"chapo" : "[(#CHAPO|html_entity_decode{7, UTF-8}|htmlspecialchars|replace{\n})]",
+			"texte" : "[(#TEXTE|html_entity_decode{7, UTF-8}|htmlspecialchars|replace{\n})]",
+			"wgraph" : "[(#SESSION{statut}|substr{0,1}|<={4}|?{[(#WGRAPH|explode{|}|table_valeur{0})], [(#WGRAPH|explode{|}|table_valeur{1}|sinon{[(#WGRAPH|explode{|}|table_valeur{0})]})]})]",
+			"clockMode" : "[(#WGRAPH|explode{|}|table_valeur{2})]",
+			"wchart" : "[(#SESSION{statut}|substr{0,1}|<={4}|?{[(#WCHART|explode{|}|table_valeur{0})], [(#WCHART|explode{|}|table_valeur{1}|sinon{[(#WCHART|explode{|}|table_valeur{0})]})]})]",
+			"ps" : "[(#PS|html_entity_decode{7, UTF-8}|htmlspecialchars|replace{\n})]"
+		}[(#COMPTEUR_BOUCLE|!={#TOTAL_BOUCLE}|oui),]
+</BOUCLE_unique>
+]
+</B_unique>
+	<B_diapos>
+	[
+	<BOUCLE_diapos(ARTICLES) {id_rubrique = 1} {statut IN prop,prepa,publie} {par numero_ordre}>
+			{
+				"id_article" : #ID_ARTICLE,
+				"titre" : "[(#TITRE|html_entity_decode{7, UTF-8}|htmlspecialchars)]",
+				"sousTitre" : "[(#ARRAY{0, 10, 1, 11, 2, 12}|find{#ID_ARTICLE}|oui|et{[(#SESSION{statut}|substr{0,1}|>{4})]}|?{[(#SOUSTITRE|html_entity_decode{7, UTF-8}|htmlspecialchars|substr{0, 10})], [(#SOUSTITRE|html_entity_decode{7, UTF-8}|htmlspecialchars)]})]",
+				"chapo" : "[(#CHAPO|html_entity_decode{7, UTF-8}|htmlspecialchars|replace{\n})]",
+				"texte" : "[(#TEXTE|html_entity_decode{7, UTF-8}|htmlspecialchars|replace{\n})]",
+				"wgraph" : "[(#SESSION{statut}|substr{0,1}|<={4}|?{[(#WGRAPH|explode{|}|table_valeur{0})], [(#WGRAPH|explode{|}|table_valeur{1}|sinon{[(#WGRAPH|explode{|}|table_valeur{0})]})]})]",
+				"clockMode" : "[(#WGRAPH|explode{|}|table_valeur{2})]",
+				"wchart" : "[(#SESSION{statut}|substr{0,1}|<={4}|?{[(#WCHART|explode{|}|table_valeur{0})], [(#WCHART|explode{|}|table_valeur{1}|sinon{[(#WCHART|explode{|}|table_valeur{0})]})]})]",
+				"ps" : "[(#PS|html_entity_decode{7, UTF-8}|htmlspecialchars|replace{\n})]"
+			}[(#COMPTEUR_BOUCLE|!={#TOTAL_BOUCLE}|oui),]
+	</BOUCLE_diapos>
+	]
+	</B_diapos>
+<//B_unique>
