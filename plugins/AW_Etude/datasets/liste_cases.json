@@ -1,0 +1,387 @@
+{
+	"cases_prog": [{
+		"unite": "CT",
+		"caseNo": "109",
+		"nomCase": "Art et culture / Kunst und Kultur"
+	}, {
+		"unite": "CN",
+		"caseNo": "112",
+		"nomCase": "Aventure humaine / ARTE Abenteuer (5)"
+	}, {
+		"unite": "CT",
+		"caseNo": "113",
+		"nomCase": "Lucarne / Spätvorstellung"
+	}, {
+		"unite": "CN",
+		"caseNo": "134",
+		"nomCase": "Sciences / Wissenschaft"
+	}, {
+		"unite": "CT",
+		"caseNo": "135",
+		"nomCase": "Philosophie"
+	}, {
+		"unite": "CT",
+		"caseNo": "137",
+		"nomCase": "Cinéma documentaire / Großer Dokumentarfilm (11)"
+	}, {
+		"unite": "CT",
+		"caseNo": "137",
+		"nomCase": "Festival cinéma 2016 / Kinofestival 2016"
+	}, {
+		"unite": "CN",
+		"caseNo": "139",
+		"nomCase": "Histoire 52' / Geschichte 52'"
+	}, {
+		"unite": "CN",
+		"caseNo": "139",
+		"nomCase": "Histoire 90' / Geschichte 90' (9)"
+	}, {
+		"unite": "CT",
+		"caseNo": "140",
+		"nomCase": "Société / Gesellschaft"
+	}, {
+		"unite": "CN",
+		"caseNo": "825",
+		"nomCase": "Série documentaire 1 (17h45 F) / Doku-Serie 1 (15:45 D)"
+	}, {
+		"unite": "CN",
+		"caseNo": "826",
+		"nomCase": "X:enius"
+	}, {
+		"unite": "CN",
+		"caseNo": "829",
+		"nomCase": "ARTE Découverte / ARTE Entdeckung"
+	}, {
+		"unite": "CT",
+		"caseNo": "835",
+		"nomCase": "Personne ne bouge / Abgedreht!"
+	}, {
+		"unite": "IN",
+		"caseNo": "836",
+		"nomCase": "28 minutes / 28 Minuten"
+	}, {
+		"unite": "IN",
+		"caseNo": "836",
+		"nomCase": "Documentaire Access été (13)"
+	}, {
+		"unite": "",
+		"caseNo": "837",
+		"nomCase": "Court de décalage"
+	}, {
+		"unite": "CN",
+		"caseNo": "838",
+		"nomCase": "Série documentaire 2 (15h30 F) / Doku-Serie 2 (15:15 D) (3)"
+	}, {
+		"unite": "CN",
+		"caseNo": "707",
+		"nomCase": "Docu Matin"
+	}, {
+		"unite": "CN",
+		"caseNo": "708",
+		"nomCase": "Docu Après-midi"
+	}, {
+		"unite": "CN",
+		"caseNo": "898",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "CN",
+		"caseNo": "898",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "IN",
+		"caseNo": "138",
+		"nomCase": "Géopolitique / Geopolitik "
+	}, {
+		"unite": "CN",
+		"caseNo": "199",
+		"nomCase": "Programmation spéciale documentaires (été/jours fériés) (14)"
+	}, {
+		"unite": "IN",
+		"caseNo": "502",
+		"nomCase": "Le dessous des cartes / Mit offenen Karten"
+	}, {
+		"unite": "IN",
+		"caseNo": "519",
+		"nomCase": "Vox Pop (cf. ancien num 527)"
+	}, {
+		"unite": "IN",
+		"caseNo": "521",
+		"nomCase": "Yourope"
+	}, {
+		"unite": "IN",
+		"caseNo": "602",
+		"nomCase": "Thema du Mardi / Thema am Dienstag"
+	}, {
+		"unite": "CN",
+		"caseNo": "605",
+		"nomCase": "360° GEO / 360° GEO Reportage"
+	}, {
+		"unite": "CT",
+		"caseNo": "611",
+		"nomCase": "Documentaire culturel / Kulturdocumentation"
+	}, {
+		"unite": "CT",
+		"caseNo": "613",
+		"nomCase": "Culture Pop / Popkultur (6)"
+	}, {
+		"unite": "CF",
+		"caseNo": "614",
+		"nomCase": "Cinéma Dimanche PT / Kino Sonntag PT (6)"
+	}, {
+		"unite": "CN",
+		"caseNo": "616",
+		"nomCase": "Documania 52' ou/oder 90' (cf. aussi 601)"
+	}, {
+		"unite": "CN",
+		"caseNo": "828",
+		"nomCase": "Terres d'Ailleurs / Wunderwelten (4)"
+	}, {
+		"unite": "CN",
+		"caseNo": "839",
+		"nomCase": "Future / Innovationsmagazin"
+	}, {
+		"unite": "CN",
+		"caseNo": "198",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "IN",
+		"caseNo": "522",
+		"nomCase": "Agenda Coup de Coeur"
+	}, {
+		"unite": "IN",
+		"caseNo": "527",
+		"nomCase": "Vox Pop (cf. 519)"
+	}, {
+		"unite": "CN",
+		"caseNo": "601",
+		"nomCase": "Documania (601/616)"
+	}, {
+		"unite": "CN",
+		"caseNo": "698",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "CN",
+		"caseNo": "699",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "CF",
+		"caseNo": "201",
+		"nomCase": "Programmes courts"
+	}, {
+		"unite": "CF",
+		"caseNo": "204",
+		"nomCase": "Cinéma découverte / Kino Entdeckung"
+	}, {
+		"unite": "CF",
+		"caseNo": "207",
+		"nomCase": "Court-circuit (CM) / KurzSchluss (KF)"
+	}, {
+		"unite": "CF",
+		"caseNo": "207",
+		"nomCase": "Court-circuit (mag) / Kurzchluss (Mag.)"
+	}, {
+		"unite": "CF",
+		"caseNo": "208",
+		"nomCase": "Cinéma muet / Stummfilm (été / sommer)"
+	}, {
+		"unite": "CF",
+		"caseNo": "213",
+		"nomCase": "Trash (été / Sommer)"
+	}, {
+		"unite": "CF",
+		"caseNo": "214",
+		"nomCase": "Cinéma classique / klassisches Kino"
+	}, {
+		"unite": "CF",
+		"caseNo": "215",
+		"nomCase": "Cinéma actuel / Aktuelles  KINO (10)"
+	}, {
+		"unite": "CF",
+		"caseNo": "217",
+		"nomCase": "Moyen métrage / Langer Kurtzfilm"
+	}, {
+		"unite": "CF",
+		"caseNo": "218",
+		"nomCase": "Tous les cinémas / Kino-Club"
+	}, {
+		"unite": "CF",
+		"caseNo": "299",
+		"nomCase": "Programmation spéciale cinéma (été - ponctuelle) (15)"
+	}, {
+		"unite": "CF",
+		"caseNo": "302",
+		"nomCase": "Téléfilm PT du vendredi / Fernsehfilm PT am Freitag"
+	}, {
+		"unite": "CT",
+		"caseNo": "310",
+		"nomCase": "Karambolage"
+	}, {
+		"unite": "CF",
+		"caseNo": "314",
+		"nomCase": "Téléfilm / 2e partie de soirée (cf. 319 en ALL)"
+	}, {
+		"unite": "CN",
+		"caseNo": "315",
+		"nomCase": "ARTE Junior"
+	}, {
+		"unite": "CF",
+		"caseNo": "318",
+		"nomCase": "Séries / Téléfilm PT // Serie / Fernsehfilm PT (12)"
+	}, {
+		"unite": "CF",
+		"caseNo": "319",
+		"nomCase": "Fernsehfilm / Serie 2. Abendhäfte (cf. 314 en FRA)"
+	}, {
+		"unite": "CF",
+		"caseNo": "298",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "CF",
+		"caseNo": "398",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "CF",
+		"caseNo": "399",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "CT",
+		"caseNo": "409",
+		"nomCase": "Tracks"
+	}, {
+		"unite": "IN",
+		"caseNo": "512",
+		"nomCase": "ARTE Reportage"
+	}, {
+		"unite": "CT",
+		"caseNo": "516",
+		"nomCase": "Metropolis"
+	}, {
+		"unite": "IN",
+		"caseNo": "523",
+		"nomCase": "Square"
+	}, {
+		"unite": "ANT",
+		"caseNo": "709",
+		"nomCase": "Programmes de comblement "
+	}, {
+		"unite": "IN",
+		"caseNo": "525",
+		"nomCase": "ARTE Journal Junior (cf. 535)"
+	}, {
+		"unite": "IN",
+		"caseNo": "526",
+		"nomCase": "Best of ARTE Journal"
+	}, {
+		"unite": "IN",
+		"caseNo": "598",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "IN",
+		"caseNo": "599",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "CF",
+		"caseNo": "216",
+		"nomCase": "Cinéma Après-midi (2)"
+	}, {
+		"unite": "CT",
+		"caseNo": "406",
+		"nomCase": "Opéra / Oper (16)"
+	}, {
+		"unite": "CT",
+		"caseNo": "408",
+		"nomCase": "Maestro"
+	}, {
+		"unite": "CT",
+		"caseNo": "408",
+		"nomCase": "Maestro long"
+	}, {
+		"unite": "CT",
+		"caseNo": "418",
+		"nomCase": "Concert Pop / Popkonzert (6) "
+	}, {
+		"unite": "CT",
+		"caseNo": "419",
+		"nomCase": "ARTE Concert Classique / ARTE Concert Klassik"
+	}, {
+		"unite": "CT",
+		"caseNo": "420",
+		"nomCase": "Performing Arts / Theater (cf. 404)"
+	}, {
+		"unite": "CT",
+		"caseNo": "421",
+		"nomCase": "Dimanche docu culturel (52') / Sonntag Kulturdocu (52') (7)"
+	}, {
+		"unite": "CT",
+		"caseNo": "423",
+		"nomCase": "Musica (8)"
+	}, {
+		"unite": "CT",
+		"caseNo": "499",
+		"nomCase": "Prog. Spéc. Musicale Noël / Musik. Weihnachtssonder"
+	}, {
+		"unite": "CN",
+		"caseNo": "806",
+		"nomCase": "Cuisine des terroirs / Zu Tisch in…"
+	}, {
+		"unite": "CT",
+		"caseNo": "404",
+		"nomCase": "Performing Arts / Theater (cf. 420)"
+	}, {
+		"unite": "CT",
+		"caseNo": "407",
+		"nomCase": "Music Planet"
+	}, {
+		"unite": "CT",
+		"caseNo": "416",
+		"nomCase": "Musique Matin"
+	}, {
+		"unite": "CT",
+		"caseNo": "422",
+		"nomCase": "Summer of … "
+	}, {
+		"unite": "CT",
+		"caseNo": "498",
+		"nomCase": "Hors cases / Programmation spéciale"
+	}, {
+		"unite": "IN",
+		"caseNo": "550",
+		"nomCase": "Web INFO"
+	}, {
+		"unite": "CT",
+		"caseNo": "450",
+		"nomCase": "Web CULTURE"
+	}, {
+		"unite": "CT",
+		"caseNo": "451",
+		"nomCase": "Plateforme ARTE Créative"
+	}, {
+		"unite": "CT",
+		"caseNo": "452",
+		"nomCase": "WEB ARTE Concert"
+	}, {
+		"unite": "CF",
+		"caseNo": "250",
+		"nomCase": "Web CINEMA / FICTION"
+	}, {
+		"unite": "CN",
+		"caseNo": "850",
+		"nomCase": "Web CONNAISSANCE"
+	}, {
+		"unite": "CN",
+		"caseNo": "851",
+		"nomCase": "Plateforme ARTE Future"
+	}, {
+		"unite": "IN",
+		"caseNo": "535",
+		"nomCase": "ARTE Journal Junior (ancien 525) (2)"
+	}, {
+		"unite": "IN",
+		"caseNo": "518",
+		"nomCase": "ARTE Journal midi"
+	}, {
+		"unite": "IN",
+		"caseNo": "520",
+		"nomCase": "ARTE Journal"
+	}]
+}
