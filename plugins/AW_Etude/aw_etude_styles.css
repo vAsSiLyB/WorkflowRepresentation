@@ -1,0 +1,219 @@
+#CACHE{0}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/Roboto Condensed.woff2');
+}
+
+@font-face {
+  font-family: 'Open Sans CB';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/OpenSans-CondBold.ttf');
+}
+
+@font-face {
+  font-family: 'Gotham Book';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/Gotham Book.ttf');
+}
+
+@font-face {
+  font-family: 'Gotham Bold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/GOTHAM-BOLD.TTF');
+}
+
+@font-face {
+  font-family: 'Proxima Nova SemiBold';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../../fonts/proximanova-semibold-webfont.woff2') format('woff2');
+}
+
+body {
+	font-family :  Arial;
+/* 	position : absolute; */
+/* 	height : 100%; */
+}
+
+body.diapos.large #contenu {
+	width:1001px;
+}
+.diapos.large #navigation {
+    width: 1001px;
+    min-height: 0px;
+}
+.crayon-html .formulaire_spip input.text, .crayon-html .formulaire_spip input.password, .crayon-html .formulaire_spip textarea {
+	z-index : 20000;
+}
+
+ul.no_bullet {
+	list-style: none;
+}
+ul ul.spip, #conteneur ul ul.spip {
+    list-style: outside none circle;
+}
+.spip_documents_center {
+	margin:auto;
+}
+
+
+.diapo_container {
+	width : 1440px;
+	min-height : 777px;
+	margin : auto;
+	padding : .1px;
+/* 	overflow : scroll; */
+}
+
+.diapo_presentation {
+	padding : .1px;
+}
+
+body.dia .diapo_container {
+	width : 100%;
+}
+
+.diapo_vignette {
+/* 	background:#FFF; */
+	height:157px;
+	width:123px;
+	float:left;
+	text-align:center;
+	margin: 7px 2px 0px 0px;
+/* 	padding:21px; */
+}
+
+.diapo_vignette div {
+	min-height : 38px;
+}
+
+.diapo_vignette_edit {
+	width:16px;
+	height:16px;
+	margin: -114px 0px 0px 103px;
+}
+.diapo_vignette a:link {
+	opacity:.1;
+}
+.diapo_vignette a:hover {
+	opacity:1;
+}
+
+.AW_diapo {
+/* 	margin-top : 0px; */
+}
+
+.diapo_field {
+/* 	position : relative; */
+	box-sizing : border-box;
+	font-family: 'Gotham Book', 'Arial';
+	font-size : 18px;
+	margin : 24px 24px 0px 0px;
+	padding : 21px;
+	cursor : text;
+}
+
+body.dia .diapo_field {
+	width : 1280px;
+	margin : auto;
+	margin-top : 2px;
+}
+
+.diapo_field.titre {
+	font-family: 'Proxima Nova SemiBold';
+	font-size : 36px;
+	text-transform : uppercase;
+	margin-top : 5px;
+}
+.diapo_field.soustitre {
+	font-family: 'Proxima Nova SemiBold';
+	font-size : 18px;
+	text-transform : uppercase;
+	border : 1px solid black;
+	border-width : 0 0 1px 0;
+}
+.diapo_field.chapo {
+	background:#FFF;
+	font-family : 'Proxima Nova SemiBold';
+}
+.diapo_field.texte {
+	background:#FFF;
+}
+.diapo_field.texte strong {
+	font-weight : default;
+	font-family : 'Proxima Nova SemiBold';
+}
+.diapo_field .legend {
+	font-family: 'Proxima Nova Condensed Thin', 'Arial';
+	font-size : 15px;
+	font-weight : bold;
+}
+body.dia .diapo_field.ps {
+	position : absolute;
+	left : 50%;
+	margin-left : -640px;
+	font-size : 10px;
+}
+body.diapos .diapo_field.ps {
+	position : inherit;
+}
+.diapo_field.ps p:first-child {
+	float : right;
+}
+
+.gizmo {
+	border : 1px dashed #000;
+	border-radius : 7px;
+}
+
+.graph_container {
+	position : absolute;
+	background-color : #FAFAFA;
+	width : 100%;
+	min-height : 101px;
+	margin:2px 24px 0 0;
+}
+
+.diapos .graph_container {
+	position : inherit;
+}
+
+.zoom_slider {
+	position : absolute;
+	top : 7px;
+	right : 21px;
+	height : 77%;
+	padding-top : 38px;
+	z-index : 20001;
+}
+
+.slider.ui-widget-content, .zoom_slider.ui-widget-content {
+	background : #FAFAFA;
+	border-color : #BBB;
+	overflow : visible;
+}
+.slider.ui-slider-vertical, .zoom_slider.ui-slider-vertical {
+/* 	margin-top : 24px; */
+	width : 3px;
+}
+.zoom_slider.ui-slider-vertical.ui-widget-content .ui-slider-handle,
+.zoom_slider.ui-slider-vertical.ui-widget-content .ui-state-default  {
+	background-color : #555;
+	margin-left: 1px;
+	width: 9px;
+	height : 38px;
+	margin-bottom : -19px;
+	cursor : pointer;
+	border-color : #FFF;
+	border-radius : 12px;
+}
+
+.ui-slider-vertical.ui-slider-pips{margin-right : 0;}
+.ui-slider-vertical.ui-slider-pips .ui-slider-pip {left : -7px;}
+.ui-slider-vertical.ui-slider-pips .ui-slider-pip .ui-slider-label {left : -21px; font-size : 9px; text-align : right; margin-top : -7px;}
