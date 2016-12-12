@@ -32,3 +32,6 @@ Sort images faster when uploading by using a different upload dropbox depending 
 Use a finite set of "captured on the fly" EXIF metadata to identify the thumbnail when writing to the Database.
 
 Differentiate easily the professional shootings from the photos you made for a simple inventory.
+
+
+####[See the Demo page](http://catalog.fluoman.net)
