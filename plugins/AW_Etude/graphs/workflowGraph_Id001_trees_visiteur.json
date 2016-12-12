@@ -1,0 +1,167 @@
+{
+     "options": {
+          "title": "Workflows Prédiffusion",
+          "type": "topGraph",
+          "zoom": 0.8
+     },
+     "graph": {
+          "B": {
+               "subflow": "neutral",
+               "id": "Id010_prodTree",
+               "type": "superGraph",
+               "title": "Workflow\nType\nprod. internes\n&\nArte Reportage",
+               "gridHook": {
+                    "x": 1,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "-1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "A": {
+               "id": "Id040_coProTree",
+               "type": "superGraph",
+               "title": "Workflow\nType\nCo-pros\n& Acquisitions\nGEIE",
+               "gridHook": {
+                    "x": 2,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "C": {
+               "subflow": "neutral",
+               "id": "Id020_poleTree",
+               "type": "superGraph",
+               "title": "Workflow\nType\nFaçonnage\nPôles",
+               "gridHook": {
+                    "x": 1,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "-1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "D": {
+               "subflow": "neutral",
+               "id": "Id050_cineTree",
+               "type": "superGraph",
+               "title": "Workflow\nType\nAcquisition\nPôle",
+               "gridHook": {
+                    "x": 1,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "-1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          }
+     }
+}

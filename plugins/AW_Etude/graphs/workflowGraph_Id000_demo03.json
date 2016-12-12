@@ -1,0 +1,924 @@
+{
+     "options": {
+          "title": "Structure de la chaîne",
+          "type": "superGraph",
+          "zoom": 0.9
+     },
+     "graph": {
+          "COM_0": {
+               "subflow": "process",
+               "title": "Acquisition :\nAchat ou\nCommande",
+               "gridHook": {
+                    "x": 0,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_0",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1
+          },
+          "VAL_0": {
+               "subflow": "hypo",
+               "title": "Validation\ndu matériel",
+               "subTitle": "Théorique",
+               "content": "Entrée 1ère\nou attente \nréception ST",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "LIV_0": {
+               "subflow": "process",
+               "subTask": "livraison",
+               "title": "Livraison\nInitiale",
+               "content": "VO* (& VO) & VI",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_0",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VAL_1": {
+               "subflow": "process",
+               "subTask": "check",
+               "title": "Validation\ndu matériel",
+               "content": "Entrée 1ère",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "LIV_1": {
+               "subflow": "hypo",
+               "title": "Livraison\nSous-titres\nVO* et/ou VO",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VAL_2": {
+               "subflow": "hypo",
+               "title": "Validation\ndu matériel",
+               "subTitle": "Théorique",
+               "content": "Préfère attendre\nréception\n2ème version",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_2A",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "LIV_2": {
+               "subflow": "hypo",
+               "title": "Livraison\nST VO* MAL",
+               "content": "Spécifique \nArte France :\nVOF-STMF",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VAL_2A": {
+               "subflow": "hypo",
+               "title": "Validation\ndu matériel",
+               "subTitle": "Théorique",
+               "content": "Préfère attendre\nréception\n2ème version",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_3",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "LIV_2A": {
+               "subflow": "hypo",
+               "title": "Livraison\nST pour VO\nachetée",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_2A",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VAL_3": {
+               "subTask": "check",
+               "title": "Validation\ndu matériel",
+               "content": "Vérification\nPAD",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_4",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "LIV_3": {
+               "subflow": "process",
+               "subTask": "livraison",
+               "title": "Livraison\n2ème version",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_3",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VAL_4": {
+               "subflow": "hypo",
+               "title": "Validation\ndu matériel",
+               "subTitle": "Théorique",
+               "content": "Préfère attendre\nréception\nversions AudioDesc",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_5",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "LIV_4": {
+               "subflow": "hypo",
+               "title": "Livraison\nST MAL\n2ème version",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_4",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VAL_5": {
+               "subflow": "hypo",
+               "title": "Validation\ndu matériel",
+               "subTitle": "Théorique",
+               "content": "Préfère attendre\nréception\n2ème V. AudioDesc",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_6",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "LIV_5": {
+               "subflow": "hypo",
+               "title": "Livraison\nAudiodescript.\nVO*",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_5",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VAL_6": {
+               "subTask": "check",
+               "title": "Validation\ndu matériel",
+               "content": "Vérif. versions\npour\npublic \"aidé\"",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "DIFF",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "inverseHandlesInHack": true
+          },
+          "LIV_6": {
+               "subflow": "hypo",
+               "title": "Livraison\nAudiodescript.\n2ème version",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VAL_6",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "DIFF": {
+               "title": "Diffusion\ndu Programme",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          }
+     }
+}

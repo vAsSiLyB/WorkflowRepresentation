@@ -1,0 +1,81 @@
+{
+        "options": {},
+        "graph": {
+                "D": {
+                        "title": "Début",
+                        "content": "",
+                        "subflow": "user",
+                        "external": false,
+                        "gridHook": {
+                                "x": 1,
+                                "y": 1
+                        },
+                        "targets": [
+                                {
+                                        "target": "A",
+                                        "versions": [
+                                                {
+                                                        "legendOut": "",
+                                                        "legendIn": ""
+                                                }
+                                        ],
+                                        "subflow": "",
+                                        "handleOffset": 0,
+                                        "innerTarget": {
+                                                "target": -1,
+                                                "versions": [
+                                                        {
+                                                                "legendOut": "",
+                                                                "legendIn": ""
+                                                        }
+                                                ]
+                                        }
+                                }
+                        ]
+                },
+                "A": {
+                        "gridHook": {
+                                "x": false,
+                                "y": false
+                        },
+                        "offset": {
+                                "x": 0,
+                                "y": 0
+                        },
+                        "targets": [
+                                {
+                                        "target": -1,
+                                        "versions": [
+                                                {
+                                                        "legendOut": "",
+                                                        "legendIn": ""
+                                                }
+                                        ],
+                                        "subflow": "",
+                                        "handleOffset": 0,
+                                        "innerTarget": {
+                                                "target": -1,
+                                                "versions": [
+                                                        {
+                                                                "legendOut": "",
+                                                                "legendIn": ""
+                                                        }
+                                                ]
+                                        }
+                                }
+                        ],
+                        "feedbacks": [
+                                {
+                                        "target": -1,
+                                        "versions": [
+                                                {
+                                                        "legendOut": "",
+                                                        "legendIn": ""
+                                                }
+                                        ],
+                                        "subflow": ""
+                                }
+                        ]
+                }
+        }
+}

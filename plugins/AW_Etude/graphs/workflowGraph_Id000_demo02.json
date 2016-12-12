@@ -1,0 +1,735 @@
+{
+     "options": {
+          "title": "Modèle d'interaction",
+          "type": "subGraph",
+          "zoom": 0.77
+     },
+     "graph": {
+          "INF_3": {
+               "subflow": "user",
+               "title": "Situation\ninitiale",
+               "content": "Les informations\nassociées au\nprogramme\nsont-elles\ncomplètes ?",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "R1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "M061",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "user",
+                         "dashed": true
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 1
+          },
+          "R1": {
+               "subflow": "hypo",
+               "subTitle": "Temps de traitement\néventuel\nou\nAttente réponse\nextérieure",
+               "content": "Temps occupé à\nune autre action",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VERIF",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15,
+               "receivedLinksHack": 1
+          },
+          "M061": {
+               "subflow": "hypo",
+               "subTask": "soft",
+               "title": "Outil\nTraitement \nPréliminaire",
+               "subTitle": "\n",
+               "content": "Intervention\nsur le matériel\navant la phase\nde vérification",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "AR",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "receivedLinksHack": 1,
+               "emittedLinksHack": 1
+          },
+          "AR": {
+               "subflow": "hypo",
+               "subTask": "worker",
+               "title": "Processus\nen arrière-plan",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "SPEC",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15
+          },
+          "M1": {
+               "subflow": "hypo",
+               "subTask": "storage",
+               "title": "Serveur",
+               "subTitle": "Données \"froides\"",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "AR",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          },
+          "SPEC": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Serveur",
+               "subTitle": "Données \"chaudes\"",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          },
+          "VERIF": {
+               "subflow": "user",
+               "title": "Traitement\nde\nl'information",
+               "content": "Phase de \nVérification\net\nRécolte \ndes données\nd'accompagnement",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "SAI",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SAI": {
+               "subflow": "user",
+               "title": "Mise à jour\ndes données\npubliques",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "NLE",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "RECLAM",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": -12,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "COM",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -31,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "M062",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "NLE": {
+               "subflow": "hypo",
+               "title": "Départ\nWorkflow\nAutre 1",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 1
+          },
+          "RECLAM": {
+               "subflow": "hypo",
+               "title": "Départ\nWorkflow\nAutre 2",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "neutral",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "COM": {
+               "subflow": "com",
+               "title": "Action\nde\nCommunication",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "DEST",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "DEST": {
+               "subTask": "com",
+               "title": "Destinataire",
+               "external": true,
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "M062": {
+               "subflow": "process",
+               "subTask": "soft",
+               "title": "Outil\nReporting",
+               "content": "Fiche PADM\nou\nRéclamation\n&\nChamps publics\ndestinés au reste\nde l'entreprise",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          }
+     }
+}

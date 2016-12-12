@@ -1,0 +1,918 @@
+{
+     "options": {
+          "title": "Workflow Livraisons Pôle"
+     },
+     "graph": {
+          "FT": {
+               "subflow": "process",
+               "subTask": "worker",
+               "title": "FileTransfer\nVO VI",
+               "content": "ID: 044000-000-A\n\nVFT F\n(maison)\nou\nVFT D\n(David / APAX)",
+               "gridHook": {
+                    "x": 0,
+                    "y": 0
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "IS1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": "V1",
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "M1",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "inverseHandlesOutHack": true
+          },
+          "IS1": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Livraisons Arte D",
+               "subTitle": "MediaGrid",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "S1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "Monitor",
+                                   "newLink": true
+                              }
+                         ]
+                    },
+                    {
+                         "target": "S1",
+                         "versions": [
+                              {
+                                   "legendOut": "XDCAM ID.mxf",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          },
+          "S1": {
+               "subflow": "process",
+               "subTask": "worker",
+               "title": "Serveur Rozet",
+               "subTitle": "XDCAM Converter",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "LI",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "M1",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 30
+          },
+          "LI": {
+               "subflow": "process",
+               "subTask": "soft",
+               "title": "M06\nLivraisons num.",
+               "content": "Création\ndes tâches AMS\n\n\n(Pas de corellation\navec les versions\nexistantes :\nvigilance requise)",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "I1",
+                         "versions": [
+                              {
+                                   "legendOut": "Requête Ingest",
+                                   "legendIn": "",
+                                   "newLink": true
+                              }
+                         ]
+                    },
+                    {
+                         "target": "VE2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "warning",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": true,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": {
+                              "none": {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         },
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "emittedLinksHack": 0.44
+          },
+          "M1": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Livraisons Pôle",
+               "subTitle": "MediaGrid",
+               "gridHook": {
+                    "x": 3,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "I1",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          },
+          "I1": {
+               "subflow": "process",
+               "subTask": "worker",
+               "title": "AMS Ingest\nVO VI",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "Lod",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "largeLink": true
+                    },
+                    {
+                         "target": "VE0",
+                         "versions": [
+                              {
+                                   "legendOut": "VO",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "VI",
+                                   "legendIn": ""
+                              }
+                         ]
+                    },
+                    {
+                         "target": "M2",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15,
+               "receivedLinksHack": 0.44
+          },
+          "G1": {
+               "subflow": "user",
+               "title": "Gestionnaire",
+               "content": "Lance l'ingest",
+               "external": true,
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "LI",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "Priorité"
+                              }
+                         ]
+                    },
+                    {
+                         "target": "G2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "largeLink": true
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "receivedLinksHack": 1,
+               "inverseHandlesOutHack": true
+          },
+          "G2": {
+               "subflow": "com",
+               "subTask": "user",
+               "title": "Gestionnaire",
+               "content": "Ingest terminé :\nQuelqu'un doit-il\nêtre informé ?",
+               "external": true,
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 2,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "Info \"Ingest OK\"",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "com"
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15,
+               "receivedLinksHack": 1
+          },
+          "Lod": {
+               "title": "Départ\nWorkflow\nLores",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 113,
+               "targets": [
+                    {
+                         "target": "-1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "receivedLinksHack": 1
+          },
+          "M2": {
+               "title": "Admira_cache",
+               "subTitle": "Mediagrid",
+               "subflow": "process",
+               "subTask": "storage",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "duration": 5,
+               "targets": [
+                    {
+                         "target": "AR",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ]
+          },
+          "AR": {
+               "subflow": "hypo",
+               "subTask": "worker",
+               "title": "AMS\nExport_to_SHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 3,
+                    "y": 0
+               },
+               "targets": [],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15,
+               "inverseHandlesInHack": true
+          },
+          "M061": {
+               "subflow": "hypo",
+               "subTask": "soft",
+               "title": "M06 Prédiff",
+               "content": "Restorer AHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "AR",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "receivedLinksHack": 1,
+               "emittedLinksHack": 1
+          },
+          "V1": {
+               "subflow": "hypo",
+               "subTask": "user",
+               "title": "Vérificateur",
+               "content": "Lance restore",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "M061",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "Priorité"
+                              }
+                         ]
+                    },
+                    {
+                         "target": "R1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "largeLink": true
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "inverseHandlesOutHack": true
+          },
+          "VE0": {
+               "subflow": "process",
+               "subTask": "user",
+               "title": "Gestionnaire\nM06 Prédiff :\nMatériels\n attendus",
+               "content": "Sous-titres \nattendus ?\nCréation Versions",
+               "gridHook": {
+                    "x": false,
+                    "y": 0
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "height": 207,
+               "targets": [
+                    {
+                         "target": "ING",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "COM",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "hypo",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ING": {
+               "title": "Départ\nWorkflow\nIngest ST",
+               "gridHook": {
+                    "x": false,
+                    "y": 0
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 113,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "COM": {
+               "subflow": "hypo",
+               "subTask": "com",
+               "title": "Gestionnaire",
+               "content": "Informe le vérif",
+               "external": true,
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "V1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "R1": {
+               "subflow": "hypo",
+               "subTask": "user",
+               "subTitle": "Attente Restore\ndepuis\nAdmira_cache",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 1,
+                    "y": -1
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15,
+               "receivedLinksHack": 1
+          },
+          "VE2": {
+               "subflow": "input",
+               "subTask": "warning",
+               "title": "Cohérence\nVersions",
+               "content": "Bad labels livrés ?\nVersion en état \"B\"",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 4,
+                    "y": 0.5
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "M061",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "Check Cohérence"
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          }
+     }
+}

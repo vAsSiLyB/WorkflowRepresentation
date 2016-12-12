@@ -1,0 +1,2166 @@
+{
+     "options": {
+          "title": "Approche des  Workflows Web"
+     },
+     "graph": {
+          "00": {
+               "subflow": "user",
+               "title": "Point d'entrée :",
+               "subTitle": "Ingest\nNouveau Matériel",
+               "external": true,
+               "gridHook": {
+                    "x": false,
+                    "y": 0
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ENC_0",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ENC_0": {
+               "subflow": "process",
+               "subTask": "worker",
+               "title": "Encodage\nHD Lores",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "SRV_0",
+                         "versions": [
+                              {
+                                   "legendOut": "EM_.mp4",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_0": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Serveur\nLoresHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ARCH",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ARCH": {
+               "subTask": "worker",
+               "title": "Archivage\nAdmira",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ADMIRA",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ADMIRA": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "ADMIRA LTO",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "REST",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "REST": {
+               "subflow": "hypo",
+               "subTask": "worker",
+               "title": "Restoration\nLoRes",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "SRV_1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 1,
+               "inverseHandlesInHack": true
+          },
+          "IN_01": {
+               "subflow": "user",
+               "title": "Point d'entrée :",
+               "subTitle": "Visionnage\nUnité de\nProgramme",
+               "external": true,
+               "gridHook": {
+                    "x": 4,
+                    "y": 0
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "REST",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "PLAY_0",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "inverseHandlesOutHack": true
+          },
+          "PLAY_0": {
+               "subTask": "soft",
+               "title": "Visionnage\nPlayer LoRes",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 1
+          },
+          "SRV_1": {
+               "subTask": "storage",
+               "title": "Serveur\nLoresHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "IN_02",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": true,
+                         "thin": true,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "ENC_01A",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "IN_02": {
+               "subflow": "user",
+               "title": "Point d'entrée : ",
+               "subTitle": "Découpage\nExtraits\nTV Guide",
+               "content": "VO*",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "ENC_01A",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ENC_01A": {
+               "subTask": "worker",
+               "title": "Déclinaison\n4 qualités",
+               "subTitle": "AMC\nsource : HD Lores",
+               "content": "VO*",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 2,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_0",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_M0",
+                         "versions": [
+                              {
+                                   "legendOut": "300 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "800 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "1500 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "2200 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "HLS",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "inverseHandlesInHack": true
+          },
+          "SRV_M0": {
+               "subTask": "storage",
+               "title": "Serveur\nMulti",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_0",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "300 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "800 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "2200 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "HLS"
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "UP_0": {
+               "subTask": "worker",
+               "title": "Upload\n4 fichiers",
+               "subTitle": "AMT\n",
+               "content": "VO*",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "IN_02B",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "IN_02B": {
+               "subflow": "user",
+               "title": "Point d'entrée :",
+               "subTitle": "Découpage\nExtraits\nTV Guide",
+               "content": "VA ou VF (+ VO*)",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "ENC_01B",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ENC_01B": {
+               "subTask": "worker",
+               "title": "Déclinaison\n(1 ou 2 fois)\n 4 qualités ",
+               "subTitle": "AMC\nsource : HD Lores",
+               "content": " 2ème Version\n&\nVO* \nsi changement TC",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -44,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_M1",
+                         "versions": [
+                              {
+                                   "legendOut": "300 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "800 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "1500 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "2200 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "HLS",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -38,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_M1",
+                         "versions": [
+                              {
+                                   "legendOut": "300 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "800 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "1500 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "2200 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "HLS",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": true,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_M1": {
+               "subTask": "storage",
+               "title": "Serveur\nMulti",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "300 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "800 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "2200 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "HLS"
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "UP_1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "300 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "800 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "2200 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "HLS"
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": true,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "UP_1": {
+               "subTask": "worker",
+               "title": "Upload\n(1 ou 2 fois)\n 4 fichiers ",
+               "subTitle": "AMT\n",
+               "content": " 2ème Version\n&\nVO* \nsi changement TC",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "IN_03",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "IN_03": {
+               "subflow": "user",
+               "title": "Point d'entrée :",
+               "subTitle": "Découpage\nBonus\nTracksApp",
+               "content": "VO* et 2ème V",
+               "external": true,
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "MC",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "MC": {
+               "subTask": "soft",
+               "title": "MediaCart",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ENC_02",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": 1
+          },
+          "PR_1": {
+               "subTask": "warning",
+               "title": "Cohérence\nProgrammation",
+               "content": "Si Heure Diff =\nH - 48",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0.6
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "ENC_02",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VE_1": {
+               "subTask": "warning",
+               "title": "Cohérence\nVersions",
+               "subTitle": "Nécessité Etat \"P\"",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0.6
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "MC",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ENC_02": {
+               "subTask": "worker",
+               "title": "Déclinaison\n2 fois\n5 qualités",
+               "subTitle": "AMC\nsource : HD Lores",
+               "content": "VO*\n\net\n\n 2ème V ",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -44,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_M2",
+                         "versions": [
+                              {
+                                   "legendOut": "300 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "800 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "1500 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "2200 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "HLS",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -38,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_M2",
+                         "versions": [
+                              {
+                                   "legendOut": "300 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "800 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "1500 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "2200 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "HLS",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_M2": {
+               "subTask": "storage",
+               "title": "Serveur\nMulti",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0.05,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "300 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "800 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "2200 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "HLS"
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "UP_2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "300 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "800 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "2200 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "HLS"
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "UP_2": {
+               "subTask": "worker",
+               "title": "Upload\n2 fois\n 4 fichiers ",
+               "subTitle": "AMT\n",
+               "content": "VO*\n\net\n\n 2ème V ",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "IN_04",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "IN_04": {
+               "subTask": "worker",
+               "title": "Point d'entrée :",
+               "subTitle": "Routine Nourrice\nReplayTV",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "ENC_03",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 12,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": 1
+          },
+          "ENC_03": {
+               "subTask": "worker",
+               "title": "Déclinaison\n2 x (5+8 qualités)",
+               "subTitle": "AMC\nsource : HD Lores",
+               "content": "\nVO*\n\net\n\n 2ème V ",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_3",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -44,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_M3",
+                         "versions": [
+                              {
+                                   "legendOut": "300 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "800 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "1500 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "2200 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "HLS",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "etc...",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -38,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_M3",
+                         "versions": [
+                              {
+                                   "legendOut": "300 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "800 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "1500 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "2200 Kb/s",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "HLS",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "etc...",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_M3": {
+               "subTask": "storage",
+               "title": "Serveur\nMulti",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0.05,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "UP_3",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "300 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "800 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "2200 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "HLS"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "etc..."
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "UP_3",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "300 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "800 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "2200 Kb/s"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "HLS"
+                              },
+                              {
+                                   "legendOut": "",
+                                   "legendIn": "etc..."
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "UP_3": {
+               "subTask": "worker",
+               "title": "Upload :\ndes dizaines\n de fichiers ",
+               "subTitle": "AMT\n",
+               "content": "VO*\n\net\n\n 2ème V ",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "PR_2": {
+               "subTask": "warning",
+               "title": "Cohérence\nProgrammation",
+               "content": "Si Heure Diff =\nH - 48",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "ENC_03",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1
+          },
+          "VE_2": {
+               "subTask": "warning",
+               "title": "Cohérence\nVersions",
+               "subTitle": "Nécessité Etat \"P\"",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0.64
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": "ENC_03",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_2": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Serveur\nLoresHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ENC_01B",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_3": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Serveur\nLoresHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ENC_02",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_4": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Serveur\nLoresHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ENC_03",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          }
+     }
+}

@@ -1,0 +1,1916 @@
+{
+     "options": {
+          "title": "Vérification 2ème version linguistique"
+     },
+     "graph": {
+          "INF_1": {
+               "subflow": "user",
+               "title": "Récolte Infos\nCommande\nMultilingue",
+               "content": "Quels travaux \nont été\n  commandés ?",
+               "gridHook": {
+                    "x": 0,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "INF_2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "INF_2": {
+               "subflow": "user",
+               "title": "Récolte Infos\nHistorique",
+               "content": "Existe-t-il\nune réclamation\ndans l'historique ?\n(com' Vérificateur)\n\nLe précédent \nvérificateur ou\nle gestionnaire\na-t-il laissé\nun état \"G\" ou \"H\"\navec\ncommentaire ?",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "RAP",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SOND",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "hypo",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "RAP": {
+               "subflow": "user",
+               "title": "Rapports\nMinetonka &\nBaton QC",
+               "content": "Si problème \nR128 ET\nsi le programme\na été produit\naprès janvier 2012\n\nSi produit avant\njan. 2012 \net niveaux vus\npar le pôle",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "INF_3",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "RECLAM2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "LOUD_PROC",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 1
+          },
+          "INF_3": {
+               "subflow": "user",
+               "title": "Récolte Infos\nSHD",
+               "content": "Le fichier Hi-Res\nest-il restoré ?",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "R1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "M061",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "user",
+                         "dashed": true
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 2
+          },
+          "R1": {
+               "subflow": "hypo",
+               "subTitle": "Attente Restore\ndepuis\nAdmira_cache",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ST1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15,
+               "receivedLinksHack": 1
+          },
+          "M061": {
+               "subflow": "hypo",
+               "subTask": "soft",
+               "title": "M06 Prédiff",
+               "content": "Restorer AHD",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "AR",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5,
+               "receivedLinksHack": 1,
+               "emittedLinksHack": 1
+          },
+          "M1": {
+               "subflow": "hypo",
+               "subTask": "storage",
+               "title": "Archive",
+               "subTitle": "Admira LTO",
+               "gridHook": {
+                    "x": 2,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 3,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "M2",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_2.wav",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          },
+          "M2": {
+               "subflow": "hypo",
+               "subTask": "storage",
+               "title": "Admira_cache",
+               "subTitle": "Mediagrid",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "AR",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_2.wav",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          },
+          "AR": {
+               "subflow": "hypo",
+               "subTask": "worker",
+               "title": "AMS\nExport_to_SHD",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "SPEC",
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.avc",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_1.wav",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "OP1B ID_2.wav",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 15
+          },
+          "SPEC": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "PREDIFF",
+               "subTitle": "Spectrum",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "OP1B ID.mxf",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "duration": 5
+          },
+          "ST1": {
+               "subflow": "user",
+               "title": "Charger\net contrôler\nFichier ST et\nRapport Ayato",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "VERIF",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "ERR_ST",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "CORR_ST",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "neutral",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "VERIF": {
+               "subflow": "user",
+               "title": "Vérification\nIntégrale\nProduction GEIE",
+               "content": "Repérage Options\nExtraits TV-Guide\n\nRelevé TC's\nHypothèses\nDéfauts",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 3,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "TC",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 2
+          },
+          "ERR_ST": {
+               "subflow": "hypo",
+               "subTask": "warning",
+               "title": "Départ\nRéclamation\nSous-titrage",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0.23
+               },
+               "height": 149,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "CORR_ST": {
+               "subflow": "hypo",
+               "subTask": "user",
+               "title": "Correction\nInterne\nDéfaut ST",
+               "content": "Si défaut isolé\nsans gravité\nou\nSi diffusion proche\nou\nSi déjà plusieurs \nréclamations et\nun défaut persiste",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0.77
+               },
+               "targets": [
+                    {
+                         "target": "AYA",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "AYA": {
+               "subflow": "hypo",
+               "subTask": "soft",
+               "title": "Ayato",
+               "content": "\nEdition\ndes sous-titres\n\n\nSauvegarde\nnouveau\nFichier",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "V_STIN",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "user",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -24,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "AYA_LOC",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "input",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 2
+          },
+          "V_STIN": {
+               "subflow": "hypo",
+               "subTask": "user",
+               "title": "M.A.J. BDD\n&\nRé-ingest",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "M06_ST",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 2
+          },
+          "M06_ST": {
+               "subflow": "hypo",
+               "subTask": "soft",
+               "title": "M06 Prédiffusion",
+               "subTitle": "Action \"Vérifier\"",
+               "content": "Détection Auto\nNouveau fichier\net action\nNouvel Ingest sur\nAction \"Vérifier\"",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "AMS_IN_ST",
+                         "versions": [
+                              {
+                                   "legendIn": "",
+                                   "legendOut": ""
+                              }
+                         ],
+                         "largeLink": false,
+                         "subflow": "soft"
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "inverseHandlesOutHack": true
+          },
+          "AMS_IN_ST": {
+               "subflow": "hypo",
+               "subTask": "worker",
+               "title": "AMS Ingest ST",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "ST_2",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": true,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "SRV_ST",
+                         "versions": [
+                              {
+                                   "legendOut": "stl + srt",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "stl + srt N-1",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": -1,
+               "emittedLinksHack": -1
+          },
+          "AYA_LOC": {
+               "subflow": "process",
+               "subTask": "storage",
+               "title": "Serveur ST01",
+               "subTitle": "Lecteur réseau\nmappé\ndepuis Srv-st-01",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "AMS_IN_ST",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SRV_ST": {
+               "subTask": "storage",
+               "title": "Serveur ST 01",
+               "gridHook": {
+                    "x": 0,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "ST_2": {
+               "subflow": "hypo",
+               "subTask": "user",
+               "title": "Attente Ingest",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": "ST1",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "redacReclam"
+                    }
+               ],
+               "receivedLinksHack": -0.5
+          },
+          "TC": {
+               "subflow": "user",
+               "title": "Contrôle\nTC's IN-OUT &\nDern.Image Utile",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "TVG",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "TVG": {
+               "subflow": "user",
+               "title": "Choix Définitif\nExtrait TVG",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "SAI",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SAI": {
+               "subflow": "user",
+               "title": "Saisie des\nDonnées",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "NLE",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "RECLAM",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": -12,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "COM",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": -29,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "M062",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "NLE": {
+               "subflow": "hypo",
+               "title": "Départ\nWorkflow\nNLE",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 0.38
+          },
+          "RECLAM": {
+               "subflow": "hypo",
+               "title": "Départ\nRéclamation\nde synthèse",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": -0.5
+               },
+               "height": 138,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "neutral",
+                         "largeLink": false,
+                         "dashed": true,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "COM": {
+               "subflow": "hypo",
+               "subTask": "com",
+               "title": "Communication",
+               "content": "Info travaux\neffectués\nou\nAppel Régie Finale :\nSi programme \nen diffusion\nle jour-même,\nou \nvérifié pendant\nPrépa CDC\npour diffusion\ndu lendemain",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "REDAC",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    },
+                    {
+                         "target": "REGIE",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "REDAC": {
+               "subflow": "hypo",
+               "title": "Unité de\nProgramme\nou\nService\nMultilingue",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 149,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "REGIE": {
+               "subflow": "hypo",
+               "title": "Régie Finale",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0.5
+               },
+               "height": 149,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "M062": {
+               "subflow": "process",
+               "subTask": "soft",
+               "title": "M06 Prédiff",
+               "subTitle": "Fiche PADM HD",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "SOND": {
+               "subTask": "warning",
+               "title": "Départ\nWorkflow\nVérification\nRetour Réclam.",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 138.5,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "RECLAM2": {
+               "subflow": "hypo",
+               "subTask": "warning",
+               "title": "Départ\nRéclamation\nLoudness",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0.23
+               },
+               "height": 149,
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "LOUD_PROC": {
+               "subflow": "hypo",
+               "subTask": "worker",
+               "title": "Traitement\nLoudness",
+               "subTitle": "Process Automatique",
+               "content": "\n= Copie\ndes essences\n+ Traitement fichier\n+ Restore Auto\nessences corrigées\n+ Archive Auto",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          }
+     }
+}
