@@ -21,7 +21,7 @@ Generate automatically an inventory number for each entry, based on the thematic
 
 Combine muliple criteria if you wish
 
-Individulaize settings for each catalog. 
+These custom settings are defined independently for each catalog. 
 
 ### Multiple upload boxes
 
