@@ -1,0 +1,8 @@
+[(#AUTORISER{creer,article})
+	[(#SET{redirect,#URL_ECRIRE{diapos, id_rubrique = 1}})]
+	[(#URL_ECRIRE{article_edit,new=oui}|parametre_url{id_rubrique,1}|parametre_url{redirect,#GET{redirect}}|icone_verticale{<:aw_etude:icone_creer_diapo:>,article,new,right})]
+]
+
+
+<h2 id="" class="">Diapositives</h2>
+#FORMULAIRE_NUMEROTER_DIAPOS
