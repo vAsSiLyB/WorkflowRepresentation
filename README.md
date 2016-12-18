@@ -9,7 +9,7 @@ The "diapo" pages are dynamically generated (Javascript updates the DOM), based 
 
 Developped as a Spip Plugin
 
-The editorial object "Article" has been retaken, and completed with custom DB columns, and a custom explorer in the back-office .
+The editorial object "Article" has been retaken, and completed with custom DB columns, and a custom explorer in the back-office.
 
 Allows to show any chosen children as a diaporama, by simply tagging the parent-node.
 
