@@ -31,4 +31,4 @@ The app reads a fixed JSON dataset on the server, and then uses the return value
 
 At this time, 2 different, but highly elaborated and customizable chart-types are available : histogram & points-cloud
 
-#### (See a real world example)[arteworkflowetude.sylvainbreil.com]
+#### [See a real world example](http://arteworkflowetude.sylvainbreil.com)
