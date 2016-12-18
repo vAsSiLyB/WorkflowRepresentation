@@ -1,0 +1,472 @@
+{
+ "options" : {},
+ "graph" : {
+"mail" : {
+        "subflow": "input",
+        "title": "E-mail",
+        "subTitle": "VA-ALL.stl\nVF-FRA.stl",
+        "external": true,
+        "gridHook": {
+                "x": 0,
+                "y": 0
+        },
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "targets": [
+                {
+                        "target": "G1",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ],
+        "feedbacks": [
+                {
+                        "target": -1,
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "subflow": ""
+                }
+        ],
+        "duration": 10
+},
+"F1" : {
+        "subflow": "neutral",
+        "title": "Input Fichier",
+        "gridHook": {
+                "x": 1,
+                "y": 2
+        },
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "targets": [
+                {
+                        "target": "LI",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": "*.stl",
+                                        "newLink": true
+                                }
+                        ]
+                }
+        ],
+        "feedbacks": [
+                {
+                        "target": -1,
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "subflow": ""
+                }
+        ],
+        "duration": 5
+},
+"G1" : {
+        "title": "Gestionnaire",
+        "content": "Lance l'ingest\nALL",
+        "subflow": "user",
+        "external": true,
+        "duration": 10,
+        "targets": [
+                {
+                        "target": "G2",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "largeLink": true
+                },
+                {
+                        "target": "LI",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ],
+        "receivedLinksHack": 0,
+        "emittedLinksHack": 0
+},
+"LI" : {
+        "subflow": "process",
+        "subTask": "soft",
+        "title": "M06\nIngest SST",
+        "content": "Création des\ntâches AMS",
+        "gridHook": {
+                "x": false,
+                "y": 2
+        },
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "targets": [
+                {
+                        "target": "I1",
+                        "versions": [
+                                {
+                                        "legendOut": "Requête Ingest",
+                                        "legendIn": "",
+                                        "newLink": true
+                                }
+                        ]
+                }
+        ],
+        "feedbacks": [
+                {
+                        "target": -1,
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "subflow": ""
+                }
+        ],
+        "duration": 10,
+        "receivedLinksHack": -1
+},
+"I1" : {
+        "title": "AMS\nImport & Ingest",
+        "content": "",
+        "subflow": "process",
+        "subTask": "worker",
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "duration": 15,
+        "targets": [
+                {
+                        "target": "M1",
+                        "versions": [
+                                {
+                                        "legendOut": "EM_VA-ALL.stl",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "EM_VA-ALL.srt",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ]
+},
+"M1" : {
+        "title": "ST_PREDIFF",
+        "subTitle": "Samba Server",
+        "subTask": "storage",
+        "content": "",
+        "subflow": "process",
+        "gridHook": {
+                "x": false,
+                "y": 3
+        },
+        "duration": 5,
+        "targets": [
+                {
+                        "target": "-1",
+                        "versions": [
+                                {
+                                        "legendOut": "OP1B ID.mxf",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "OP1B ID.avc",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "OP1B ID.wav",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "OP1B ID_1.wav",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ]
+},
+"F2" : {
+        "subflow": "neutral",
+        "title": "Input Fichier",
+        "gridHook": {
+                "x": 4,
+                "y": 2
+        },
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "targets": [
+                {
+                        "target": "LI_2",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": "*.stl",
+                                        "newLink": true
+                                }
+                        ]
+                }
+        ],
+        "feedbacks": [
+                {
+                        "target": -1,
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "subflow": ""
+                }
+        ],
+        "duration": 5
+},
+"G2" : {
+        "title": "",
+        "subTitle": "",
+        "content": "Ingest terminé",
+        "subflow": "user",
+        "external": true,
+        "offset": {
+                "x": 1,
+                "y": 0
+        },
+        "duration": 5,
+        "targets": [
+                {
+                        "target": "G1_2",
+                        "versions": [
+                                {
+                                        "legendOut": "Info \"Ingest OK\"",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "largeLink": true,
+                        "subflow": "com"
+                }
+        ],
+        "receivedLinksHack": 1
+},
+"G1_2" : {
+        "title": "Gestionnaire",
+        "content": "Lance l'ingest\nFRA",
+        "subflow": "user",
+        "external": true,
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "duration": 10,
+        "targets": [
+                {
+                        "target": "G2_2",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "largeLink": true
+                },
+                {
+                        "target": "LI_2",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ],
+        "receivedLinksHack": 1,
+        "emittedLinksHack": 0
+},
+"LI_2" : {
+        "subflow": "process",
+        "subTask": "soft",
+        "title": "M06\nIngest SST",
+        "content": "Création des\ntâches AMS",
+        "gridHook": {
+                "x": false,
+                "y": 2
+        },
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "targets": [
+                {
+                        "target": "I1_2",
+                        "versions": [
+                                {
+                                        "legendOut": "Requête Ingest",
+                                        "legendIn": "",
+                                        "newLink": true
+                                }
+                        ]
+                }
+        ],
+        "feedbacks": [
+                {
+                        "target": -1,
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "subflow": ""
+                }
+        ],
+        "duration": 10,
+        "receivedLinksHack": -1
+},
+"I1_2" : {
+        "title": "AMS\nImport & Ingest",
+        "content": "",
+        "subflow": "process",
+        "subTask": "worker",
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "duration": 15,
+        "targets": [
+                {
+                        "target": "Lod",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "largeLink": true
+                },
+                {
+                        "target": "M1_2",
+                        "versions": [
+                                {
+                                        "legendOut": "EM_VF-FRA.stl",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "EM_VF-FRA.srt",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ]
+},
+"M1_2" : {
+        "title": "ST_PREDIFF",
+        "subTitle": "Samba Server",
+        "subTask": "storage",
+        "content": "",
+        "subflow": "process",
+        "gridHook": {
+                "x": false,
+                "y": 3
+        },
+        "duration": 5,
+        "targets": [
+                {
+                        "target": "-1",
+                        "versions": [
+                                {
+                                        "legendOut": "OP1B ID.mxf",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "OP1B ID.avc",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "OP1B ID.wav",
+                                        "legendIn": ""
+                                },
+                                {
+                                        "legendOut": "OP1B ID_1.wav",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ]
+},
+"G2_2" : {
+        "title": "",
+        "subTitle": "",
+        "content": "Ingest terminé\nInforme le Vérif",
+        "subflow": "com",
+        "external": true,
+        "offset": {
+                "x": 1,
+                "y": 0
+        },
+        "duration": 10,
+        "targets": [
+                {
+                        "target": "-1",
+                        "versions": [
+                                {
+                                        "legendOut": "\"Ingest OK\"",
+                                        "legendIn": ""
+                                }
+                        ],
+                        "subflow": "com"
+                }
+        ],
+        "receivedLinksHack": 1
+},
+"Lod" : {
+        "title": "Départ\nWorkflow\nLores",
+        "subTitle": "",
+        "content": "",
+        "subflow": "neutral",
+        "external": false,
+        "height": 113,
+        "gridHook": {
+                "x": false,
+                "y": 2
+        },
+        "offset": {
+                "x": 0,
+                "y": 0
+        },
+        "duration": 10,
+        "targets": [
+                {
+                        "target": "-1",
+                        "versions": [
+                                {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                }
+                        ]
+                }
+        ],
+        "receivedLinksHack": 1
+}}
+}

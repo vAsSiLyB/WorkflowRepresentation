@@ -1,0 +1,2 @@
+#CACHE{0}[(#ENV{subpage}|substr{-4}|={JSON}|oui)#HTTP_HEADER{Content-Type: application/json;charset=utf8}#HTTP_HEADER{Vary: Accept-Encoding}][(#INCLURE{fond=squelettes/#ENV{subpage}, env})]
+[(#REM)<pre>[(#ENV*|unserialize|print_r{1})]</pre>]

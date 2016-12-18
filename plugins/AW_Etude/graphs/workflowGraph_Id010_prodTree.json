@@ -1,0 +1,559 @@
+{
+     "options": {
+          "title": "Workflow prod. internes & Arte Reportage",
+          "type": "superGraph"
+     },
+     "graph": {
+          "A": {
+               "subflow": "neutral",
+               "title": "Création n°EM",
+               "gridHook": {
+                    "x": 0,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "height": 672,
+               "targets": [
+                    {
+                         "target": "B",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "handleOffset": -36
+                    },
+                    {
+                         "target": "C000",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "handleOffset": 9
+                    },
+                    {
+                         "target": "C",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    },
+                    {
+                         "target": "D",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "B": {
+               "subflow": "neutral",
+               "subTask": "prod",
+               "title": "Production\nST",
+               "gridHook": {
+                    "x": false,
+                    "y": 1
+               },
+               "offset": {
+                    "x": 2,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "E",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": -1,
+               "emittedLinksHack": -1
+          },
+          "C000": {
+               "subflow": "neutral",
+               "subTask": "prod",
+               "id": "",
+               "type": "",
+               "title": "Commande\n& Production\nSujets Arte Rep.",
+               "subTitle": "",
+               "content": "Spécifique\nArte Reportage",
+               "gridHook": {
+                    "x": 1,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "C00",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": -1,
+               "emittedLinksHack": -1
+          },
+          "C00": {
+               "subflow": "neutral",
+               "subTask": "presta",
+               "id": "",
+               "type": "",
+               "title": "Post-Production\nSujets Arte Rep.",
+               "subTitle": "",
+               "content": "Spécifique\nArte Reportage",
+               "gridHook": {
+                    "x": 2,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "C0",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": {
+                              "none": {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         },
+                         "subflow": ""
+                    }
+               ],
+               "emittedLinksHack": -1,
+               "inverseHandlesInHack": true
+          },
+          "C0": {
+               "subflow": "neutral",
+               "subTask": "check",
+               "id": "Id011_ArteRep",
+               "type": "",
+               "title": "Vérification\nIntégrale\nSujets Arte Rep.",
+               "subTitle": "",
+               "content": "Spécifique\nArte Reportage",
+               "gridHook": {
+                    "x": 3,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "F",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": "C00",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam"
+                    }
+               ],
+               "receivedLinksHack": -1
+          },
+          "C": {
+               "subflow": "neutral",
+               "subTask": "prod",
+               "title": "Tourn. Plateaux",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 2,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "F",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": 1,
+               "emittedLinksHack": 1
+          },
+          "D": {
+               "subflow": "neutral",
+               "subTask": "multi",
+               "title": "Création\nVersions",
+               "gridHook": {
+                    "x": 1,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "F",
+                         "versions": [
+                              {
+                                   "legendOut": "VA-STA",
+                                   "legendIn": ""
+                              },
+                              {
+                                   "legendOut": "VF-STF",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "innerTarget": {
+                              "target": "VE",
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": "VA"
+                                   },
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": "VF"
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          },
+          "E": {
+               "subflow": "neutral",
+               "subTask": "livraison",
+               "id": "Id014_ingestST",
+               "title": "Workflow\nLivraison ST",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "Low",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "thin": true
+                    },
+                    {
+                         "target": "G",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": -1
+          },
+          "F": {
+               "subflow": "neutral",
+               "subTask": "livraison",
+               "id": "Id012_prod",
+               "title": "Workflow\nLivraisons\nProd.",
+               "gridHook": {
+                    "x": false,
+                    "y": 3
+               },
+               "offset": {
+                    "x": 1,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "Low",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "thin": true
+                    },
+                    {
+                         "target": "G",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "inverseHandlesOutHack": true
+          },
+          "G": {
+               "subflow": "user",
+               "subTask": "check",
+               "id": "Id013_verif_ARmag",
+               "title": "Vérification\nType\nAR Magazine",
+               "gridHook": {
+                    "x": false,
+                    "y": 2
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": "LIV_REGIE",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": "F",
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "reclam"
+                    }
+               ]
+          },
+          "LIV_REGIE": {
+               "title": "Workflow\nLivraison\nRégie Finale",
+               "gridHook": {
+                    "x": false,
+                    "y": false
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": "",
+                         "largeLink": false,
+                         "dashed": false,
+                         "thin": false,
+                         "handleOffset": 0,
+                         "innerTarget": {
+                              "target": -1,
+                              "versions": [
+                                   {
+                                        "legendOut": "",
+                                        "legendIn": ""
+                                   }
+                              ]
+                         }
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ],
+               "receivedLinksHack": -1
+          },
+          "Low": {
+               "subflow": "process",
+               "subTask": "worker",
+               "title": "Workflow\nLores",
+               "gridHook": {
+                    "x": false,
+                    "y": 0
+               },
+               "offset": {
+                    "x": 0,
+                    "y": 0
+               },
+               "targets": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ]
+                    }
+               ],
+               "feedbacks": [
+                    {
+                         "target": -1,
+                         "versions": [
+                              {
+                                   "legendOut": "",
+                                   "legendIn": ""
+                              }
+                         ],
+                         "subflow": ""
+                    }
+               ]
+          }
+     }
+}
